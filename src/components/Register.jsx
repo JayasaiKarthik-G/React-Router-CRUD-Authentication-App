@@ -80,7 +80,9 @@ function Register() {
 
             const response = await axios.get(`${API_URL}/users`);
 
-            const existingUser = response.data.find(
+            const users = response.data;
+
+            const existingUser = users.find(
                 (user) => user.email === email
             );
 
@@ -89,8 +91,16 @@ function Register() {
                 return;
             }
 
+            const numericIds = users
+                .map(user => Number(user.id))
+                .filter(id => !isNaN(id));
+
+            const newId = numericIds.length > 0
+                ? Math.max(...numericIds) + 1
+                : 1;
+                
             let obj = {
-                id: response.data.length + 1,
+                id: newId,
                 name,
                 email,
                 number,
