@@ -1,11 +1,3 @@
 {
-  "users": [
-    {
-      "id": 2,
-      "name": "Jayasai Karthik",
-      "email": "jayasaikarthik@gmail.com",
-      "number": "9347207505",
-      "password": "Jack@2002"
-    }
-  ]
+  "users": []
 }
