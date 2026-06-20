@@ -1,0 +1,11 @@
+{
+  "name": "react-user-management-backend",
+  "version": "1.0.0",
+  "description": "Backend for React User Management System using JSON Server",
+  "scripts": {
+    "start": "npx json-server --watch db.json --host 0.0.0.0 --port 3000"
+  },
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3"
+  }
+}
